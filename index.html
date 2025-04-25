@@ -1,1 +1,114 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NHL Playoff Tracker - Modern Player Tiles</title>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+      margin: 0;
+      padding: 0 1rem;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 0 1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .tile {
+      background: white;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+      transition: background 0.3s ease;
+    }
+    .tile.winner {
+      background: #e8f5e9; /* light green */
+      border: 2px solid #4caf50;
+    }
+    .tile.middle {
+      background: #fffde7; /* light yellow */
+      border: 2px solid #fbc02d;
+    }
+    .tile.loser {
+      background: #ffebee; /* light red */
+      border: 2px solid #f44336;
+    }
+    .tile h2 {
+      text-align: center;
+      margin-top: 0;
+    }
+    .pick-list {
+      list-style: none;
+      padding: 0;
+    }
+    .pick-list li {
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed #ccc;
+      padding-bottom: 4px;
+    }
+    footer {
+      text-align: center;
+      margin: 3rem 0 1rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🏒 NHL Playoff Predictions 2025</h1>
+    <p style="font-weight:500;">Modern Tile View: One card per player</p>
+  </header>
+
+  <section class="grid">
+    <div class="tile winner">
+      <h2>Jason</h2>
+      <ul class="pick-list">
+        <li>Leafs vs Sens: Leafs in 7 <span>✅</span></li>
+        <li>Caps vs Habs: Habs in 6 <span>❌</span></li>
+        <li>Oilers vs Kings: Edmonton in 5 <span>❌</span></li>
+        <li>Jets vs Blues: Jets in 6 <span>✅</span></li>
+      </ul>
+      <p><strong>Total Score: 2 pts</strong></p>
+    </div>
+
+    <div class="tile middle">
+      <h2>Tyler</h2>
+      <ul class="pick-list">
+        <li>Leafs vs Sens: Sens in 6 <span>❌</span></li>
+        <li>Caps vs Habs: Caps in 6 <span>✅</span></li>
+        <li>Oilers vs Kings: Edmonton in 6 <span>❌</span></li>
+        <li>Jets vs Blues: Jets in 5 <span>✅</span></li>
+      </ul>
+      <p><strong>Total Score: 2 pts</strong></p>
+    </div>
+
+    <div class="tile loser">
+      <h2>Clay</h2>
+      <ul class="pick-list">
+        <li>Leafs vs Sens: Sens in 6 <span>❌</span></li>
+        <li>Caps vs Habs: Habs in 7 <span>❌</span></li>
+        <li>Oilers vs Kings: Edmonton in 5 <span>❌</span></li>
+        <li>Jets vs Blues: Jets out in 6 <span>❌</span></li>
+      </ul>
+      <p><strong>Total Score: 0 pts</strong></p>
+    </div>
+  </section>
+
+  <footer>
+    Built with 💡 by Jason & AI — NHL 2025
+  </footer>
+</body>
+</html>
