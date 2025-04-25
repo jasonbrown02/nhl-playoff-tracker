@@ -16,7 +16,6 @@
       color: #e0e0e0;
     }
 
-    /* HEADER */
     .hero {
       position: relative;
       width: 100%;
@@ -34,8 +33,7 @@
     }
     .overlay {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       width: 100%;
       height: 100%;
       background: rgba(0, 0, 0, 0.6);
@@ -58,7 +56,6 @@
       letter-spacing: 1px;
     }
 
-    /* MAIN LAYOUT */
     .container {
       max-width: 900px;
       margin: 0 auto;
@@ -100,16 +97,8 @@
       font-weight: 600;
       text-transform: uppercase;
     }
-    .nailed {
-      background-color: #00e676;
-      color: #000;
-    }
-    .smart {
-      background-color: #2e7d32;
-      color: #fff;
-    }
-    .ouch {
-      background-color: #e65100;
+    .waiting {
+      background-color: #666;
       color: #fff;
     }
     .score {
@@ -129,11 +118,9 @@
 </head>
 <body>
 
-  <!-- 🎥 HERO HEADER -->
   <section class="hero">
     <video autoplay muted loop playsinline>
       <source src="https://www.dropbox.com/scl/fi/1zxptz62y6j2268e9c9gr/hockey-gloves.mp4?rlkey=e9tpzgehswwbmhsapw6fy3ibj&raw=1" type="video/mp4">
-      Your browser does not support the video tag.
     </video>
     <div class="overlay"></div>
     <div class="hero-title">
@@ -141,79 +128,76 @@
     </div>
   </section>
 
-  <!-- 🏒 PLAYER CARDS -->
   <div class="container">
 
-    <!-- Jason -->
     <div class="card">
       <h2>Jason</h2>
       <div class="matchup">
-        <div class="match-title">Leafs vs Sens: 4–2 Final</div>
-        <div class="pick">Pick: Leafs in 7 <span class="result-tag nailed">Nailed It!</span></div>
+        <div class="match-title">Leafs vs Sens: Series in Progress</div>
+        <div class="pick">Pick: Leafs in 7 <span class="result-tag waiting">Anxiously Waiting</span></div>
       </div>
       <div class="matchup">
-        <div class="match-title">Caps vs Habs: 2–0 Series</div>
-        <div class="pick">Pick: Habs in 6 <span class="result-tag ouch">Ouch</span></div>
+        <div class="match-title">Caps vs Habs: Series in Progress</div>
+        <div class="pick">Pick: Habs in 6 <span class="result-tag waiting">Anxiously Waiting</span></div>
       </div>
       <div class="matchup">
-        <div class="match-title">Oilers vs Kings: 0–2 Series</div>
-        <div class="pick">Pick: Edmonton in 5 <span class="result-tag ouch">Ouch</span></div>
+        <div class="match-title">Oilers vs Kings: Series in Progress</div>
+        <div class="pick">Pick: Edmonton in 5 <span class="result-tag waiting">Anxiously Waiting</span></div>
       </div>
       <div class="matchup">
-        <div class="match-title">Jets vs Blues: 2–0 Series</div>
-        <div class="pick">Pick: Jets in 6 <span class="result-tag smart">Smarty Pants</span></div>
+        <div class="match-title">Jets vs Blues: Series in Progress</div>
+        <div class="pick">Pick: Jets in 6 <span class="result-tag waiting">Anxiously Waiting</span></div>
       </div>
-      <div class="score">Score: 2 pts</div>
+      <div class="score">Score: TBD</div>
     </div>
 
-    <!-- Tyler -->
     <div class="card">
       <h2>Tyler</h2>
       <div class="matchup">
-        <div class="match-title">Leafs vs Sens: 4–2 Final</div>
-        <div class="pick">Pick: Sens in 6 <span class="result-tag ouch">Ouch</span></div>
+        <div class="match-title">Leafs vs Sens: Series in Progress</div>
+        <div class="pick">Pick: Sens in 6 <span class="result-tag waiting">Anxiously Waiting</span></div>
       </div>
       <div class="matchup">
-        <div class="match-title">Caps vs Habs: 2–0 Series</div>
-        <div class="pick">Pick: Caps in 6 <span class="result-tag smart">Smarty Pants</span></div>
+        <div class="match-title">Caps vs Habs: Series in Progress</div>
+        <div class="pick">Pick: Caps in 6 <span class="result-tag waiting">Anxiously Waiting</span></div>
       </div>
       <div class="matchup">
-        <div class="match-title">Oilers vs Kings: 0–2 Series</div>
-        <div class="pick">Pick: Edmonton in 6 <span class="result-tag ouch">Ouch</span></div>
+        <div class="match-title">Oilers vs Kings: Series in Progress</div>
+        <div class="pick">Pick: Edmonton in 6 <span class="result-tag waiting">Anxiously Waiting</span></div>
       </div>
       <div class="matchup">
-        <div class="match-title">Jets vs Blues: 2–0 Series</div>
-        <div class="pick">Pick: Jets in 5 <span class="result-tag smart">Smarty Pants</span></div>
+        <div class="match-title">Jets vs Blues: Series in Progress</div>
+        <div class="pick">Pick: Jets in 5 <span class="result-tag waiting">Anxiously Waiting</span></div>
       </div>
-      <div class="score">Score: 2 pts</div>
+      <div class="score">Score: TBD</div>
     </div>
 
-    <!-- Clay -->
     <div class="card">
       <h2>Clay</h2>
       <div class="matchup">
-        <div class="match-title">Leafs vs Sens: 4–2 Final</div>
-        <div class="pick">Pick: Sens in 6 <span class="result-tag ouch">Ouch</span></div>
+        <div class="match-title">Leafs vs Sens: Series in Progress</div>
+        <div class="pick">Pick: Sens in 6 <span class="result-tag waiting">Anxiously Waiting</span></div>
       </div>
       <div class="matchup">
-        <div class="match-title">Caps vs Habs: 2–0 Series</div>
-        <div class="pick">Pick: Habs in 7 <span class="result-tag ouch">Ouch</span></div>
+        <div class="match-title">Caps vs Habs: Series in Progress</div>
+        <div class="pick">Pick: Habs in 7 <span class="result-tag waiting">Anxiously Waiting</span></div>
       </div>
       <div class="matchup">
-        <div class="match-title">Oilers vs Kings: 0–2 Series</div>
-        <div class="pick">Pick: Edmonton in 5 <span class="result-tag ouch">Ouch</span></div>
+        <div class="match-title">Oilers vs Kings: Series in Progress</div>
+        <div class="pick">Pick: Edmonton in 5 <span class="result-tag waiting">Anxiously Waiting</span></div>
       </div>
       <div class="matchup">
-        <div class="match-title">Jets vs Blues: 2–0 Series</div>
-        <div class="pick">Pick: Jets out in 6 <span class="result-tag ouch">Ouch</span></div>
+        <div class="match-title">Jets vs Blues: Series in Progress</div>
+        <div class="pick">Pick: Jets out in 6 <span class="result-tag waiting">Anxiously Waiting</span></div>
       </div>
-      <div class="score">Score: 0 pts</div>
+      <div class="score">Score: TBD</div>
     </div>
 
   </div>
 
   <footer>
-    Designed with cool by Jason & ChatGPT · NHL 2025
+    Built with playoff stress by Jason & ChatGPT · NHL 2025
   </footer>
+
 </body>
 </html>
