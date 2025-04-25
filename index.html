@@ -1,114 +1,134 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NHL Playoff Tracker</title>
-  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+  <title>NHL Tracker - Dark Mode</title>
   <style>
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f0f2f5;
-      color: #333;
       margin: 0;
-      padding: 0 1rem;
+      font-family: 'Inter', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
     }
     header {
       text-align: center;
-      padding: 2rem 0 1rem;
+      padding: 2rem;
+      background-color: #1e1e1e;
+      border-bottom: 1px solid #333;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 600;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-    .tile {
-      background: white;
-      border-radius: 1rem;
+    .card {
+      background: #1f1f1f;
+      border-radius: 16px;
       padding: 1.5rem;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.06);
-      transition: background 0.3s ease;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
     }
-    .tile.winner {
-      background: #e8f5e9; /* light green */
-      border: 2px solid #4caf50;
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
     }
-    .tile.middle {
-      background: #fffde7; /* light yellow */
-      border: 2px solid #fbc02d;
-    }
-    .tile.loser {
-      background: #ffebee; /* light red */
-      border: 2px solid #f44336;
-    }
-    .tile h2 {
-      text-align: center;
+    .card h2 {
       margin-top: 0;
+      font-size: 1.5rem;
+      color: #ffffff;
     }
     .pick-list {
       list-style: none;
       padding: 0;
+      margin-top: 1rem;
     }
     .pick-list li {
-      margin-bottom: 0.5rem;
       display: flex;
       justify-content: space-between;
-      border-bottom: 1px dashed #ccc;
-      padding-bottom: 4px;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #2c2c2c;
+    }
+    .result-pill {
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    .win {
+      background-color: #00bfa6;
+      color: #000;
+    }
+    .loss {
+      background-color: #ff6e40;
+      color: #000;
+    }
+    .score {
+      text-align: right;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #90caf9;
+      margin-top: 1rem;
     }
     footer {
       text-align: center;
-      margin: 3rem 0 1rem;
       font-size: 0.9rem;
-      color: #888;
+      padding: 2rem;
+      color: #777;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>🏒 NHL Playoff Predictions 2025</h1>
-    <p style="font-weight:500;">Modern Tile View: One card per player</p>
   </header>
 
   <section class="grid">
-    <div class="tile winner">
+    <div class="card">
       <h2>Jason</h2>
       <ul class="pick-list">
-        <li>Leafs vs Sens: Leafs in 7 <span>✅</span></li>
-        <li>Caps vs Habs: Habs in 6 <span>❌</span></li>
-        <li>Oilers vs Kings: Edmonton in 5 <span>❌</span></li>
-        <li>Jets vs Blues: Jets in 6 <span>✅</span></li>
+        <li>Leafs vs Sens: Leafs in 7 <span class="result-pill win">Correct</span></li>
+        <li>Caps vs Habs: Habs in 6 <span class="result-pill loss">Wrong</span></li>
+        <li>Oilers vs Kings: Edmonton in 5 <span class="result-pill loss">Wrong</span></li>
+        <li>Jets vs Blues: Jets in 6 <span class="result-pill win">Correct</span></li>
       </ul>
-      <p><strong>Total Score: 2 pts</strong></p>
+      <div class="score">Score: 2 pts</div>
     </div>
 
-    <div class="tile middle">
+    <div class="card">
       <h2>Tyler</h2>
       <ul class="pick-list">
-        <li>Leafs vs Sens: Sens in 6 <span>❌</span></li>
-        <li>Caps vs Habs: Caps in 6 <span>✅</span></li>
-        <li>Oilers vs Kings: Edmonton in 6 <span>❌</span></li>
-        <li>Jets vs Blues: Jets in 5 <span>✅</span></li>
+        <li>Leafs vs Sens: Sens in 6 <span class="result-pill loss">Wrong</span></li>
+        <li>Caps vs Habs: Caps in 6 <span class="result-pill win">Correct</span></li>
+        <li>Oilers vs Kings: Edmonton in 6 <span class="result-pill loss">Wrong</span></li>
+        <li>Jets vs Blues: Jets in 5 <span class="result-pill win">Correct</span></li>
       </ul>
-      <p><strong>Total Score: 2 pts</strong></p>
+      <div class="score">Score: 2 pts</div>
     </div>
 
-    <div class="tile loser">
+    <div class="card">
       <h2>Clay</h2>
       <ul class="pick-list">
-        <li>Leafs vs Sens: Sens in 6 <span>❌</span></li>
-        <li>Caps vs Habs: Habs in 7 <span>❌</span></li>
-        <li>Oilers vs Kings: Edmonton in 5 <span>❌</span></li>
-        <li>Jets vs Blues: Jets out in 6 <span>❌</span></li>
+        <li>Leafs vs Sens: Sens in 6 <span class="result-pill loss">Wrong</span></li>
+        <li>Caps vs Habs: Habs in 7 <span class="result-pill loss">Wrong</span></li>
+        <li>Oilers vs Kings: Edmonton in 5 <span class="result-pill loss">Wrong</span></li>
+        <li>Jets vs Blues: Jets out in 6 <span class="result-pill loss">Wrong</span></li>
       </ul>
-      <p><strong>Total Score: 0 pts</strong></p>
+      <div class="score">Score: 0 pts</div>
     </div>
   </section>
 
   <footer>
-    Built with love by IntelligenceHavingFun.AI — 2025
+    Designed with style by Jason & ChatGPT · NHL 2025
   </footer>
 </body>
 </html>
