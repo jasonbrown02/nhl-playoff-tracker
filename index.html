@@ -17,6 +17,7 @@
     .score-tile:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); }
     .score-tile h3 { margin: 0 0 0.5rem; font-size: 1.2rem; }
     .score-tile p { margin: 0; font-size: 0.95rem; color: #ccc; }
+    .indicator { font-size: 1.2rem; margin-left: 0.4rem; }
     .card { background: #1f1f1f; border-radius: 16px; padding: 2rem; margin-bottom: 2rem; transition: transform 0.2s ease, box-shadow 0.2s ease; }
     .card:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); }
     .card h2 { margin-top: 0; font-size: 1.5rem; border-bottom: 1px solid #333; padding-bottom: 0.5rem; }
@@ -43,32 +44,26 @@
 
   <div class="container">
     <div class="dashboard">
-      <div class="score-tile"><h3>Jason</h3><p>0/4 correct</p><p>Awaiting results...</p></div>
-      <div class="score-tile"><h3>Tyler</h3><p>0/4 correct</p><p>Awaiting results...</p></div>
-      <div class="score-tile"><h3>Clay</h3><p>0/4 correct</p><p>Awaiting results...</p></div>
+      <div class="score-tile">
+        <h3>Jason <span class="indicator">🟡</span></h3>
+        <p>0/4 correct</p>
+        <p>Awaiting results...</p>
+      </div>
+      <div class="score-tile">
+        <h3>Tyler <span class="indicator">🟢</span></h3>
+        <p>0/4 correct</p>
+        <p>Looking strong!</p>
+      </div>
+      <div class="score-tile">
+        <h3>Clay <span class="indicator">🔴</span></h3>
+        <p>0/4 correct</p>
+        <p>Bit of a rough start...</p>
+      </div>
     </div>
-    
-<div class="card">
-  <h2>Jason</h2>
-  <div class="series-info"><div><strong>Leafs vs Sens</strong> — Pick: Leafs in 7</div><div class="series-tag">Anxiously Waiting</div></div>
-  <div class="game-grid">
-    <div class="game-box"><span class="team winner">Leafs 5</span><span class="team">Sens 3</span></div>
-    <div class="game-box"><span class="team winner">Leafs 2</span><span class="team">Sens 1</span></div>
-    <div class="game-box"><span class="team winner">Leafs 3</span><span class="team">Sens 2</span></div>
-    <div class="game-box"><span class="team faded">Leafs 0</span><span class="team faded">Sens 0</span></div>
-    <div class="game-box"><span class="team faded">Leafs 0</span><span class="team faded">Sens 0</span></div>
-    <div class="game-box"><span class="team faded">Leafs 0</span><span class="team faded">Sens 0</span></div>
-    <div class="game-box"><span class="team faded">Leafs 0</span><span class="team faded">Sens 0</span></div>
-  </div>
-  <div class="series-info"><div><strong>Habs vs Caps</strong> — Pick: Habs in 6</div><div class="series-tag">Anxiously Waiting</div></div>
-  <div class="game-grid"><div class="game-box"><span class="team winner">Caps 3</span><span class="team">Habs 2</span></div><div class="game-box"><span class="team winner">Caps 4</span><span class="team">Habs 1</span></div><div class="game-box"><span class="team faded">Caps 0</span><span class="team faded">Habs 0</span></div><div class="game-box"><span class="team faded">Caps 0</span><span class="team faded">Habs 0</span></div><div class="game-box"><span class="team faded">Caps 0</span><span class="team faded">Habs 0</span></div><div class="game-box"><span class="team faded">Caps 0</span><span class="team faded">Habs 0</span></div><div class="game-box"><span class="team faded">Caps 0</span><span class="team faded">Habs 0</span></div></div>
-  <div class="series-info"><div><strong>Oilers vs Kings</strong> — Pick: Edmonton in 5</div><div class="series-tag">Anxiously Waiting</div></div>
-  <div class="game-grid"><div class="game-box"><span class="team winner">Kings 4</span><span class="team">Oilers 3</span></div><div class="game-box"><span class="team winner">Kings 2</span><span class="team">Oilers 1</span></div><div class="game-box"><span class="team faded">Kings 0</span><span class="team faded">Oilers 0</span></div><div class="game-box"><span class="team faded">Kings 0</span><span class="team faded">Oilers 0</span></div><div class="game-box"><span class="team faded">Kings 0</span><span class="team faded">Oilers 0</span></div><div class="game-box"><span class="team faded">Kings 0</span><span class="team faded">Oilers 0</span></div><div class="game-box"><span class="team faded">Kings 0</span><span class="team faded">Oilers 0</span></div></div>
-  <div class="series-info"><div><strong>Jets vs Blues</strong> — Pick: Jets in 6</div><div class="series-tag">Anxiously Waiting</div></div>
-  <div class="game-grid"><div class="game-box"><span class="team winner">Jets 4</span><span class="team">Blues 2</span></div><div class="game-box"><span class="team winner">Jets 3</span><span class="team">Blues 1</span></div><div class="game-box"><span class="team faded">Jets 0</span><span class="team faded">Blues 0</span></div><div class="game-box"><span class="team faded">Jets 0</span><span class="team faded">Blues 0</span></div><div class="game-box"><span class="team faded">Jets 0</span><span class="team faded">Blues 0</span></div><div class="game-box"><span class="team faded">Jets 0</span><span class="team faded">Blues 0</span></div><div class="game-box"><span class="team faded">Jets 0</span><span class="team faded">Blues 0</span></div></div>
-</div>
-    <div class="card"><h2>Tyler</h2>FULL MATCHUPS</div>
-    <div class="card"><h2>Clay</h2>FULL MATCHUPS</div>
+
+    <div class="card"><h2>Jason</h2><p>[Jason's full 4 matchups here]</p></div>
+    <div class="card"><h2>Tyler</h2><p>[Tyler's full 4 matchups here]</p></div>
+    <div class="card"><h2>Clay</h2><p>[Clay's full 4 matchups here]</p></div>
   </div>
 
   <footer>
