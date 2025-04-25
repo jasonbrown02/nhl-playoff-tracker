@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,6 +58,72 @@
       text-transform: uppercase;
       margin: 0;
     }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    .card {
+      background: #1f1f1f;
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.8rem;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
+    }
+    .matchup {
+      margin: 1rem 0;
+      border-bottom: 1px dashed #333;
+      padding-bottom: 1rem;
+    }
+    .match-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+    }
+    .pick {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+    }
+    .result-tag {
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .waiting {
+      background-color: #666;
+      color: #fff;
+    }
+    .games-list {
+      margin-top: 0.5rem;
+      padding-left: 1rem;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+    .score {
+      text-align: right;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #90caf9;
+      margin-top: 1rem;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 2rem;
+      color: #777;
+    }
   </style>
 </head>
 <body>
@@ -70,6 +137,42 @@
       <h1>NHL 2025</h1>
     </div>
   </section>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>Jason</h2>
+      <div class="matchup">
+        <div class="match-title">Leafs vs Sens: Series in Progress</div>
+        <div class="pick">Pick: Leafs in 7 <span class="result-tag waiting">Anxiously Waiting</span></div>
+        <div class="games-list">
+          • Game 1: Leafs 5 - Sens 3<br>
+          • Game 2: Leafs 2 - Sens 1
+        </div>
+      </div>
+      <div class="matchup">
+        <div class="match-title">Caps vs Habs: Series in Progress</div>
+        <div class="pick">Pick: Habs in 6 <span class="result-tag waiting">Anxiously Waiting</span></div>
+        <div class="games-list">• Game 1: Caps 3 - Habs 2<br>• Game 2: Caps 4 - Habs 1</div>
+      </div>
+      <div class="matchup">
+        <div class="match-title">Oilers vs Kings: Series in Progress</div>
+        <div class="pick">Pick: Edmonton in 5 <span class="result-tag waiting">Anxiously Waiting</span></div>
+        <div class="games-list">• Game 1: Kings 4 - Oilers 3<br>• Game 2: Kings 2 - Oilers 1</div>
+      </div>
+      <div class="matchup">
+        <div class="match-title">Jets vs Blues: Series in Progress</div>
+        <div class="pick">Pick: Jets in 6 <span class="result-tag waiting">Anxiously Waiting</span></div>
+        <div class="games-list">• Game 1: Jets 4 - Blues 2<br>• Game 2: Jets 3 - Blues 1</div>
+      </div>
+      <div class="score">Score: TBD</div>
+    </div>
+
+  </div>
+
+  <footer>
+    Built with playoff stress by Jason & ChatGPT · NHL 2025
+  </footer>
 
 </body>
 </html>
