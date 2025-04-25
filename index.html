@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NHL Playoff Predictions Tracker</title>
+  <title>NHL Playoff Tracker - Jason vs Tyler vs Clay</title>
   <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
   <style>
     body {
@@ -25,12 +25,48 @@
       background-color: #f8d7da;
       font-weight: bold;
     }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .match-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 1rem;
+    }
+    .match-card h3 {
+      margin-top: 0;
+      text-align: center;
+    }
+    .leaderboard {
+      background: #fff3cd;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    .leaderboard h2 {
+      text-align: center;
+      color: #856404;
+    }
+    .logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .logos img {
+      height: 40px;
+    }
     table td, table th {
       text-align: center;
       vertical-align: middle;
     }
     main.container {
-      max-width: 960px;
+      max-width: 1000px;
       margin: 0 auto;
     }
   </style>
@@ -42,69 +78,135 @@
       <p><strong>Jason vs Tyler vs Clay</strong></p>
     </header>
 
-    <table role="grid">
-      <thead>
-        <tr>
-          <th>Matchup</th>
-          <th>Jason's Pick</th>
-          <th>Tyler's Pick</th>
-          <th>Clay's Pick</th>
-          <th>Actual Result</th>
-          <th>Jason</th>
-          <th>Tyler</th>
-          <th>Clay</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Leafs vs Senators</td>
-          <td>Leafs in 7</td>
-          <td>Sens in 6</td>
-          <td>Sens in 6</td>
-          <td>Leafs lead 3-0</td>
-          <td class="correct">✅</td>
-          <td class="incorrect">❌</td>
-          <td class="incorrect">❌</td>
-        </tr>
-        <tr>
-          <td>Caps vs Habs</td>
-          <td>Habs in 6</td>
-          <td>Caps in 6</td>
-          <td>Habs in 7</td>
-          <td>Caps lead 2-0</td>
-          <td class="incorrect">❌</td>
-          <td class="correct">✅</td>
-          <td class="incorrect">❌</td>
-        </tr>
-        <tr>
-          <td>Oilers vs Kings</td>
-          <td>Edmonton in 5</td>
-          <td>Edmonton in 6</td>
-          <td>Edmonton in 5</td>
-          <td>Kings lead 2-0</td>
-          <td class="incorrect">❌</td>
-          <td class="incorrect">❌</td>
-          <td class="incorrect">❌</td>
-        </tr>
-        <tr>
-          <td>Jets vs Blues</td>
-          <td>Jets in 6</td>
-          <td>Jets in 5</td>
-          <td>Jets out in 6</td>
-          <td>Jets lead 2-0</td>
-          <td class="correct">✅</td>
-          <td class="correct">✅</td>
-          <td class="incorrect">❌</td>
-        </tr>
-      </tbody>
-    </table>
+    <section>
+      <h2>📊 Classic Table View</h2>
+      <table role="grid">
+        <thead>
+          <tr>
+            <th>Matchup</th>
+            <th>Jason's Pick</th>
+            <th>Tyler's Pick</th>
+            <th>Clay's Pick</th>
+            <th>Actual Result</th>
+            <th>Jason</th>
+            <th>Tyler</th>
+            <th>Clay</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Leafs vs Senators</td>
+            <td>Leafs in 7</td>
+            <td>Sens in 6</td>
+            <td>Sens in 6</td>
+            <td>Leafs lead 3-0</td>
+            <td class="correct">✅</td>
+            <td class="incorrect">❌</td>
+            <td class="incorrect">❌</td>
+          </tr>
+          <tr>
+            <td>Caps vs Habs</td>
+            <td>Habs in 6</td>
+            <td>Caps in 6</td>
+            <td>Habs in 7</td>
+            <td>Caps lead 2-0</td>
+            <td class="incorrect">❌</td>
+            <td class="correct">✅</td>
+            <td class="incorrect">❌</td>
+          </tr>
+          <tr>
+            <td>Oilers vs Kings</td>
+            <td>Edmonton in 5</td>
+            <td>Edmonton in 6</td>
+            <td>Edmonton in 5</td>
+            <td>Kings lead 2-0</td>
+            <td class="incorrect">❌</td>
+            <td class="incorrect">❌</td>
+            <td class="incorrect">❌</td>
+          </tr>
+          <tr>
+            <td>Jets vs Blues</td>
+            <td>Jets in 6</td>
+            <td>Jets in 5</td>
+            <td>Jets out in 6</td>
+            <td>Jets lead 2-0</td>
+            <td class="correct">✅</td>
+            <td class="correct">✅</td>
+            <td class="incorrect">❌</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-    <h2>🏆 Current Standings</h2>
-    <ul>
-      <li><strong>Jason:</strong> 2 points</li>
-      <li><strong>Tyler:</strong> 2 points</li>
-      <li><strong>Clay:</strong> 0 points</li>
-    </ul>
+    <section>
+      <h2>🎴 Matchup Cards</h2>
+      <div class="card-grid">
+        <div class="match-card">
+          <h3>Leafs vs Senators</h3>
+          <div class="logos">
+            <img src="https://assets.nhle.com/logos/nhl/svg/TOR.svg" alt="Leafs">
+            <img src="https://assets.nhle.com/logos/nhl/svg/OTT.svg" alt="Sens">
+          </div>
+          <p><strong>Result:</strong> Leafs lead 3-0</p>
+          <ul>
+            <li>Jason: Leafs in 7 ✅</li>
+            <li>Tyler: Sens in 6 ❌</li>
+            <li>Clay: Sens in 6 ❌</li>
+          </ul>
+        </div>
+
+        <div class="match-card">
+          <h3>Caps vs Habs</h3>
+          <div class="logos">
+            <img src="https://assets.nhle.com/logos/nhl/svg/WSH.svg" alt="Caps">
+            <img src="https://assets.nhle.com/logos/nhl/svg/MTL.svg" alt="Habs">
+          </div>
+          <p><strong>Result:</strong> Caps lead 2-0</p>
+          <ul>
+            <li>Jason: Habs in 6 ❌</li>
+            <li>Tyler: Caps in 6 ✅</li>
+            <li>Clay: Habs in 7 ❌</li>
+          </ul>
+        </div>
+
+        <div class="match-card">
+          <h3>Oilers vs Kings</h3>
+          <div class="logos">
+            <img src="https://assets.nhle.com/logos/nhl/svg/EDM.svg" alt="Oilers">
+            <img src="https://assets.nhle.com/logos/nhl/svg/LAK.svg" alt="Kings">
+          </div>
+          <p><strong>Result:</strong> Kings lead 2-0</p>
+          <ul>
+            <li>Jason: Edmonton in 5 ❌</li>
+            <li>Tyler: Edmonton in 6 ❌</li>
+            <li>Clay: Edmonton in 5 ❌</li>
+          </ul>
+        </div>
+
+        <div class="match-card">
+          <h3>Jets vs Blues</h3>
+          <div class="logos">
+            <img src="https://assets.nhle.com/logos/nhl/svg/WPG.svg" alt="Jets">
+            <img src="https://assets.nhle.com/logos/nhl/svg/STL.svg" alt="Blues">
+          </div>
+          <p><strong>Result:</strong> Jets lead 2-0</p>
+          <ul>
+            <li>Jason: Jets in 6 ✅</li>
+            <li>Tyler: Jets in 5 ✅</li>
+            <li>Clay: Jets out in 6 ❌</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="leaderboard">
+      <h2>🏆 Leaderboard</h2>
+      <ol>
+        <li><strong>Jason</strong> – 2 points ✅✅</li>
+        <li><strong>Tyler</strong> – 2 points ✅✅</li>
+        <li><strong>Clay</strong> – 0 points ❌❌❌❌</li>
+      </ol>
+    </section>
   </main>
 </body>
 </html>
