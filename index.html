@@ -1,1 +1,211 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NHL 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+      color: #e0e0e0;
+    }
+    .hero {
+      position: relative;
+      height: 30vh;
+      overflow: hidden;
+    }
+    .hero video {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.65);
+      z-index: 2;
+    }
+    .hero-title {
+      position: relative;
+      z-index: 3;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    .dashboard {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .score-tile {
+      background: #1f1f1f;
+      flex: 1;
+      padding: 1rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .score-tile:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+    .score-tile h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.2rem;
+    }
+    .score-tile p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+    .card {
+      background: #1f1f1f;
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
+    }
+    .series-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .series-tag {
+      background-color: #444;
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      position: relative;
+    }
+    .series-tag::before {
+      content: "●";
+      color: #ccc;
+      font-size: 0.8rem;
+      margin-right: 6px;
+    }
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 0.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+    .game-box {
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 0.5rem;
+      background-color: #2a2a2a;
+      transition: background-color 0.3s ease;
+    }
+    .game-box:hover {
+      background-color: #333;
+    }
+    .team {
+      display: block;
+    }
+    .winner {
+      font-weight: 700;
+      color: #fbc02d;
+    }
+    .faded {
+      color: #555;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 2rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="https://www.dropbox.com/scl/fi/1zxptz62y6j2268e9c9gr/hockey-gloves.mp4?rlkey=e9tpzgehswwbmhsapw6fy3ibj&raw=1" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-title">NHL 2025</div>
+  </section>
+
+  <div class="container">
+
+    <!-- Dashboard -->
+    <div class="dashboard">
+      <div class="score-tile">
+        <h3>Jason</h3>
+        <p>0/0 correct</p>
+        <p>Awaiting results...</p>
+      </div>
+      <div class="score-tile">
+        <h3>Tyler</h3>
+        <p>0/0 correct</p>
+        <p>Awaiting results...</p>
+      </div>
+      <div class="score-tile">
+        <h3>Clay</h3>
+        <p>0/0 correct</p>
+        <p>Awaiting results...</p>
+      </div>
+    </div>
+
+    <!-- Jason’s Predictions -->
+    <div class="card">
+      <h2>Jason</h2>
+      <div class="series-info">
+        <div><strong>Leafs vs Sens</strong> — Pick: Leafs in 7</div>
+        <div class="series-tag">Anxiously Waiting</div>
+      </div>
+      <div class="game-grid">
+        <div class="game-box"><span class="team winner">Leafs 5</span><span class="team">Sens 3</span></div>
+        <div class="game-box"><span class="team winner">Leafs 2</span><span class="team">Sens 1</span></div>
+        <div class="game-box"><span class="team winner">Leafs 3</span><span class="team">Sens 2</span></div>
+        <div class="game-box"><span class="team faded">Leafs 0</span><span class="team faded">Sens 0</span></div>
+        <div class="game-box"><span class="team faded">Leafs 0</span><span class="team faded">Sens 0</span></div>
+        <div class="game-box"><span class="team faded">Leafs 0</span><span class="team faded">Sens 0</span></div>
+        <div class="game-box"><span class="team faded">Leafs 0</span><span class="team faded">Sens 0</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    Built with playoff stress by Jason & ChatGPT · NHL 2025
+  </footer>
+
+</body>
+</html>
