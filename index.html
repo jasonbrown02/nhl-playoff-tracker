@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,34 +7,26 @@
   <title>NHL 2025</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
+      margin: 0;
       font-family: 'Poppins', sans-serif;
       background-color: #121212;
       color: #e0e0e0;
     }
-
     .hero {
       position: relative;
-      width: 100%;
       height: 30vh;
       overflow: hidden;
     }
     .hero video {
       position: absolute;
       top: 0; left: 0;
-      min-width: 100%;
-      min-height: 100%;
+      width: 100%; height: 100%;
       object-fit: cover;
       z-index: 1;
     }
     .overlay {
       position: absolute;
-      top: 0; left: 0;
       width: 100%;
       height: 100%;
       background: rgba(0, 0, 0, 0.65);
@@ -44,85 +37,91 @@
       z-index: 3;
       height: 100%;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
-      color: white;
-      text-align: center;
-    }
-    .hero-title h1 {
+      justify-content: center;
       font-size: 4rem;
       font-weight: 700;
-      letter-spacing: 0.1em;
       text-transform: uppercase;
-      margin: 0;
+      letter-spacing: 0.1em;
     }
-
     .container {
-      max-width: 900px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 2rem 1rem;
+    }
+    .dashboard {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .score-tile {
+      background: #1f1f1f;
+      flex: 1;
+      padding: 1rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    }
+    .score-tile h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.2rem;
+    }
+    .score-tile p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #ccc;
     }
     .card {
       background: #1f1f1f;
       border-radius: 16px;
       padding: 2rem;
       margin-bottom: 2rem;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     }
     .card h2 {
       margin-top: 0;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       border-bottom: 1px solid #333;
       padding-bottom: 0.5rem;
     }
-    .matchup {
-      margin: 1rem 0;
-      border-bottom: 1px dashed #333;
-      padding-bottom: 1rem;
-    }
-    .match-title {
-      font-weight: 600;
-      font-size: 1.1rem;
-      margin-bottom: 0.3rem;
-    }
-    .pick {
+    .series-info {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-bottom: 1rem;
       flex-wrap: wrap;
-      margin-bottom: 0.5rem;
     }
-    .result-tag {
-      font-size: 0.8rem;
-      padding: 4px 10px;
-      border-radius: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
+    .series-tag {
       background-color: #666;
       color: #fff;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
     }
-    .games-list {
-      margin-top: 0.5rem;
-      padding-left: 1rem;
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 0.5rem;
+      text-align: center;
       font-size: 0.9rem;
       color: #ccc;
     }
-    .games-list b {
-      color: #fff;
+    .game-box {
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 0.5rem;
     }
-    .score {
-      text-align: right;
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #90caf9;
-      margin-top: 1rem;
+    .team {
+      display: block;
     }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      padding: 2rem;
-      color: #777;
+    .winner {
+      font-weight: 700;
+      color: #fbc02d;
+    }
+    .faded {
+      color: #555;
     }
   </style>
 </head>
@@ -133,103 +132,53 @@
       <source src="https://www.dropbox.com/scl/fi/1zxptz62y6j2268e9c9gr/hockey-gloves.mp4?rlkey=e9tpzgehswwbmhsapw6fy3ibj&raw=1" type="video/mp4">
     </video>
     <div class="overlay"></div>
-    <div class="hero-title">
-      <h1>NHL 2025</h1>
-    </div>
+    <div class="hero-title">NHL 2025</div>
   </section>
 
   <div class="container">
 
-    <!-- Jason -->
+    <!-- Mini Dashboard -->
+    <div class="dashboard">
+      <div class="score-tile">
+        <h3>Jason</h3>
+        <p>0/0 correct</p>
+        <p>Awaiting results...</p>
+      </div>
+      <div class="score-tile">
+        <h3>Tyler</h3>
+        <p>0/0 correct</p>
+        <p>Awaiting results...</p>
+      </div>
+      <div class="score-tile">
+        <h3>Clay</h3>
+        <p>0/0 correct</p>
+        <p>Awaiting results...</p>
+      </div>
+    </div>
+
+    <!-- Jason Example -->
     <div class="card">
       <h2>Jason</h2>
-      <div class="matchup">
-        <div class="match-title">Leafs vs Sens: Series in Progress</div>
-        <div class="pick">Pick: Leafs in 7 <span class="result-tag">Anxiously Waiting</span></div>
-        <div class="games-list">
-          • Game 1: <b>Leafs</b> 5 - Sens 3<br>
-          • Game 2: <b>Leafs</b> 2 - Sens 1
-        </div>
-      </div>
-      <div class="matchup">
-        <div class="match-title">Caps vs Habs: Series in Progress</div>
-        <div class="pick">Pick: Habs in 6 <span class="result-tag">Anxiously Waiting</span></div>
-        <div class="games-list">• Game 1: <b>Caps</b> 3 - Habs 2<br>• Game 2: <b>Caps</b> 4 - Habs 1</div>
-      </div>
-      <div class="matchup">
-        <div class="match-title">Oilers vs Kings: Series in Progress</div>
-        <div class="pick">Pick: Edmonton in 5 <span class="result-tag">Anxiously Waiting</span></div>
-        <div class="games-list">• Game 1: <b>Kings</b> 4 - Oilers 3<br>• Game 2: <b>Kings</b> 2 - Oilers 1</div>
-      </div>
-      <div class="matchup">
-        <div class="match-title">Jets vs Blues: Series in Progress</div>
-        <div class="pick">Pick: Jets in 6 <span class="result-tag">Anxiously Waiting</span></div>
-        <div class="games-list">• Game 1: <b>Jets</b> 4 - Blues 2<br>• Game 2: <b>Jets</b> 3 - Blues 1</div>
-      </div>
-      <div class="score">Score: TBD</div>
-    </div>
 
-    <!-- Tyler -->
-    <div class="card">
-      <h2>Tyler</h2>
-      <div class="matchup">
-        <div class="match-title">Leafs vs Sens: Series in Progress</div>
-        <div class="pick">Pick: Sens in 6 <span class="result-tag">Anxiously Waiting</span></div>
-        <div class="games-list">
-          • Game 1: <b>Leafs</b> 5 - Sens 3<br>
-          • Game 2: <b>Leafs</b> 2 - Sens 1
-        </div>
+      <div class="series-info">
+        <div><strong>Leafs vs Sens</strong> — Pick: Leafs in 7</div>
+        <div class="series-tag">Anxiously Waiting</div>
       </div>
-      <div class="matchup">
-        <div class="match-title">Caps vs Habs: Series in Progress</div>
-        <div class="pick">Pick: Caps in 6 <span class="result-tag">Anxiously Waiting</span></div>
-        <div class="games-list">• Game 1: <b>Caps</b> 3 - Habs 2<br>• Game 2: <b>Caps</b> 4 - Habs 1</div>
+      <div class="game-grid">
+        <div class="game-box"><span class="team winner">Leafs 5</span><span class="team">Sens 3</span></div>
+        <div class="game-box"><span class="team winner">Leafs 2</span><span class="team">Sens 1</span></div>
+        <div class="game-box"><span class="team winner">Leafs 3</span><span class="team">Sens 2</span></div>
+        <div class="game-box"><span class="team faded">Leafs 0</span><span class="team faded">Sens 0</span></div>
+        <div class="game-box"><span class="team faded">Leafs 0</span><span class="team faded">Sens 0</span></div>
+        <div class="game-box"><span class="team faded">Leafs 0</span><span class="team faded">Sens 0</span></div>
+        <div class="game-box"><span class="team faded">Leafs 0</span><span class="team faded">Sens 0</span></div>
       </div>
-      <div class="matchup">
-        <div class="match-title">Oilers vs Kings: Series in Progress</div>
-        <div class="pick">Pick: Edmonton in 6 <span class="result-tag">Anxiously Waiting</span></div>
-        <div class="games-list">• Game 1: <b>Kings</b> 4 - Oilers 3<br>• Game 2: <b>Kings</b> 2 - Oilers 1</div>
-      </div>
-      <div class="matchup">
-        <div class="match-title">Jets vs Blues: Series in Progress</div>
-        <div class="pick">Pick: Jets in 5 <span class="result-tag">Anxiously Waiting</span></div>
-        <div class="games-list">• Game 1: <b>Jets</b> 4 - Blues 2<br>• Game 2: <b>Jets</b> 3 - Blues 1</div>
-      </div>
-      <div class="score">Score: TBD</div>
-    </div>
 
-    <!-- Clay -->
-    <div class="card">
-      <h2>Clay</h2>
-      <div class="matchup">
-        <div class="match-title">Leafs vs Sens: Series in Progress</div>
-        <div class="pick">Pick: Sens in 6 <span class="result-tag">Anxiously Waiting</span></div>
-        <div class="games-list">
-          • Game 1: <b>Leafs</b> 5 - Sens 3<br>
-          • Game 2: <b>Leafs</b> 2 - Sens 1
-        </div>
-      </div>
-      <div class="matchup">
-        <div class="match-title">Caps vs Habs: Series in Progress</div>
-        <div class="pick">Pick: Habs in 7 <span class="result-tag">Anxiously Waiting</span></div>
-        <div class="games-list">• Game 1: <b>Caps</b> 3 - Habs 2<br>• Game 2: <b>Caps</b> 4 - Habs 1</div>
-      </div>
-      <div class="matchup">
-        <div class="match-title">Oilers vs Kings: Series in Progress</div>
-        <div class="pick">Pick: Edmonton in 5 <span class="result-tag">Anxiously Waiting</span></div>
-        <div class="games-list">• Game 1: <b>Kings</b> 4 - Oilers 3<br>• Game 2: <b>Kings</b> 2 - Oilers 1</div>
-      </div>
-      <div class="matchup">
-        <div class="match-title">Jets vs Blues: Series in Progress</div>
-        <div class="pick">Pick: Jets out in 6 <span class="result-tag">Anxiously Waiting</span></div>
-        <div class="games-list">• Game 1: <b>Jets</b> 4 - Blues 2<br>• Game 2: <b>Jets</b> 3 - Blues 1</div>
-      </div>
-      <div class="score">Score: TBD</div>
     </div>
 
   </div>
 
-  <footer>
+  <footer style="text-align:center;padding:2rem;font-size:0.9rem;color:#777;">
     Built with playoff stress by Jason & ChatGPT · NHL 2025
   </footer>
 
