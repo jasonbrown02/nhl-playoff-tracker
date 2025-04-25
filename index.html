@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +9,7 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background-color: #121212;
+      background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
       color: #e0e0e0;
     }
     .hero {
@@ -62,6 +61,11 @@
       border-radius: 12px;
       text-align: center;
       box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .score-tile:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     }
     .score-tile h3 {
       margin: 0 0 0.5rem;
@@ -77,6 +81,11 @@
       border-radius: 16px;
       padding: 2rem;
       margin-bottom: 2rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     }
     .card h2 {
       margin-top: 0;
@@ -92,13 +101,20 @@
       flex-wrap: wrap;
     }
     .series-tag {
-      background-color: #666;
+      background-color: #444;
       color: #fff;
       padding: 4px 10px;
       border-radius: 12px;
       font-size: 0.8rem;
       font-weight: 600;
       text-transform: uppercase;
+      position: relative;
+    }
+    .series-tag::before {
+      content: "●";
+      color: #ccc;
+      font-size: 0.8rem;
+      margin-right: 6px;
     }
     .game-grid {
       display: grid;
@@ -112,6 +128,11 @@
       border: 1px solid #333;
       border-radius: 8px;
       padding: 0.5rem;
+      background-color: #2a2a2a;
+      transition: background-color 0.3s ease;
+    }
+    .game-box:hover {
+      background-color: #333;
     }
     .team {
       display: block;
@@ -123,40 +144,13 @@
     .faded {
       color: #555;
     }
-  
-    body {
-      background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
-    }
-    .card, .score-tile {
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .card:hover, .score-tile:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    }
-    .game-box {
-      background-color: #2a2a2a;
-      transition: background-color 0.3s ease;
-    }
-    .game-box:hover {
-      background-color: #333;
-    }
-    .series-tag {
-      background-color: #444;
-      position: relative;
-    }
-    .series-tag::before {
-      content: "●";
-      color: #ccc;
-      font-size: 0.8rem;
-      margin-right: 6px;
-    }
-    .footer-logo {
+    footer {
+      text-align: center;
       font-size: 0.9rem;
-      opacity: 0.6;
-      font-style: italic;
+      padding: 2rem;
+      color: #777;
     }
-    
+  </style>
 </head>
 <body>
 
@@ -170,7 +164,7 @@
 
   <div class="container">
 
-    <!-- Mini Dashboard -->
+    <!-- Dashboard -->
     <div class="dashboard">
       <div class="score-tile">
         <h3>Jason</h3>
@@ -189,10 +183,9 @@
       </div>
     </div>
 
-    <!-- Jason Example -->
+    <!-- Jason’s Predictions -->
     <div class="card">
       <h2>Jason</h2>
-
       <div class="series-info">
         <div><strong>Leafs vs Sens</strong> — Pick: Leafs in 7</div>
         <div class="series-tag">Anxiously Waiting</div>
@@ -206,12 +199,11 @@
         <div class="game-box"><span class="team faded">Leafs 0</span><span class="team faded">Sens 0</span></div>
         <div class="game-box"><span class="team faded">Leafs 0</span><span class="team faded">Sens 0</span></div>
       </div>
-
     </div>
 
   </div>
 
-  <footer style="text-align:center;padding:2rem;font-size:0.9rem;color:#777;">
+  <footer>
     Built with playoff stress by Jason & ChatGPT · NHL 2025
   </footer>
 
