@@ -3,25 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NHL Tracker - Elite Dark Mode</title>
+  <title>NHL 2025</title>
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
       font-family: 'Inter', sans-serif;
       background-color: #121212;
       color: #e0e0e0;
     }
-    header {
+
+    /* HEADER */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      overflow: hidden;
+    }
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 2;
+    }
+    .hero-title {
+      position: relative;
+      z-index: 3;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
       text-align: center;
-      padding: 2rem;
-      background-color: #1e1e1e;
-      border-bottom: 1px solid #333;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      font-weight: 600;
+    .hero-title h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
+
+    /* MAIN LAYOUT */
     .container {
       max-width: 900px;
       margin: 0 auto;
@@ -91,10 +128,20 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>🏒 NHL Playoff Predictions 2025</h1>
-  </header>
 
+  <!-- 🎥 HERO HEADER -->
+  <section class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="https://www.dropbox.com/scl/fi/1zxptz62y6j2268e9c9gr/hockey-gloves.mp4?rlkey=e9tpzgehswwbmhsapw6fy3ibj&raw=1" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-title">
+      <h1>NHL 2025</h1>
+    </div>
+  </section>
+
+  <!-- 🏒 PLAYER CARDS -->
   <div class="container">
 
     <!-- Jason -->
