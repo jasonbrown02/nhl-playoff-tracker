@@ -24,11 +24,11 @@
     .series-tag { background-color: #444; color: #fff; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; position: relative; }
     .series-tag::before { content: "●"; color: #ccc; font-size: 0.8rem; margin-right: 6px; }
     .game-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.5rem; text-align: center; font-size: 0.9rem; color: #ccc; margin-bottom: 2rem; }
-    .game-box { border: 1px solid #333; border-radius: 8px; padding: 0.5rem; background-color: #2a2a2a; transition: background-color 0.3s ease; }
+    .game-box { border: 1px solid #333; border-radius: 8px; padding: 0.5rem; background-color: #2a2a2a; transition: background-color 0.3s ease; position: relative; }
     .game-box:hover { background-color: #333; }
     .team { display: block; }
     .winner { font-weight: 700; color: #fbc02d; }
-    .faded { color: #555; }
+    .dot { position: absolute; top: 5px; right: 5px; font-size: 1.2rem; }
     footer { text-align: center; font-size: 0.9rem; padding: 2rem; color: #777; }
   </style>
 </head>
@@ -50,12 +50,12 @@
 
   <div class="card">
     <h2>Jason</h2>
-	      <div class="series-info"><div><strong>Leafs vs Sens</strong> — Pick: Leafs in 7</div><div class="series-tag">Anxiously Waiting</div></div>
+        <div class="series-info"><div><strong>Leafs vs Sens</strong> — Pick: Leafs in 7</div><div class="series-tag">Anxiously Waiting</div></div>
     <div class="game-grid">
-      <div class="game-box"><span class="team winner">Toronto 6</span><span class="team">Ottawa 2</span></div>
-      <div class="game-box"><span class="team winner">Toronto 3</span><span class="team">Ottawa 2</span></div>
-      <div class="game-box"><span class="team winner">Toronto 3</span><span class="team">Ottawa 2</span></div>
-      <div class="game-box"><span class="team">Toronto 3</span><span class="team winner">Ottawa 4</span></div>
+      <div class="game-box"><span class="dot">🔴</span><span class="team winner">Toronto 6</span><span class="team">Ottawa 2</span></div>
+      <div class="game-box"><span class="dot">🔴</span><span class="team winner">Toronto 3</span><span class="team">Ottawa 2</span></div>
+      <div class="game-box"><span class="dot">🔴</span><span class="team winner">Toronto 3</span><span class="team">Ottawa 2</span></div>
+      <div class="game-box"><span class="dot">🔴</span><span class="team">Toronto 3</span><span class="team winner">Ottawa 4</span></div>
       <div class="game-box"><span class="team faded">Game 5</span><span class="team faded">Coming</span></div>
       <div class="game-box"><span class="team faded">Game 6</span><span class="team faded">Coming</span></div>
       <div class="game-box"><span class="team faded">Game 7</span><span class="team faded">Coming</span></div>
@@ -63,10 +63,10 @@
 
     <div class="series-info"><div><strong>Habs vs Caps</strong> — Pick: Habs in 6</div><div class="series-tag">Anxiously Waiting</div></div>
     <div class="game-grid">
-      <div class="game-box"><span class="team winner">Washington 3</span><span class="team">Montreal 2</span></div>
-      <div class="game-box"><span class="team winner">Washington 3</span><span class="team">Montreal 1</span></div>
-      <div class="game-box"><span class="team winner">Montreal 6</span><span class="team">Washington 3</span></div>
-      <div class="game-box"><span class="team winner">Washington 5</span><span class="team">Montreal 2</span></div>
+      <div class="game-box"><span class="dot">🔴</span><span class="team winner">Washington 3</span><span class="team">Montreal 2</span></div>
+      <div class="game-box"><span class="dot">🔴</span><span class="team winner">Washington 3</span><span class="team">Montreal 1</span></div>
+      <div class="game-box"><span class="dot">🟢</span><span class="team winner">Montreal 6</span><span class="team">Washington 3</span></div>
+      <div class="game-box"><span class="dot">🔴</span><span class="team winner">Washington 5</span><span class="team">Montreal 2</span></div>
       <div class="game-box"><span class="team faded">Game 5</span><span class="team faded">Coming</span></div>
       <div class="game-box"><span class="team faded">Game 6</span><span class="team faded">Coming</span></div>
       <div class="game-box"><span class="team faded">Game 7</span><span class="team faded">Coming</span></div>
@@ -74,9 +74,9 @@
 
     <div class="series-info"><div><strong>Oilers vs Kings</strong> — Pick: Edmonton in 5</div><div class="series-tag">Anxiously Waiting</div></div>
     <div class="game-grid">
-      <div class="game-box"><span class="team">Edmonton 5</span><span class="team winner">Los Angeles 6</span></div>
-      <div class="game-box"><span class="team">Edmonton 2</span><span class="team winner">Los Angeles 6</span></div>
-      <div class="game-box"><span class="team winner">Edmonton 7</span><span class="team">Los Angeles 4</span></div>
+      <div class="game-box"><span class="dot">🔴</span><span class="team">Edmonton 5</span><span class="team winner">Los Angeles 6</span></div>
+      <div class="game-box"><span class="dot">🔴</span><span class="team">Edmonton 2</span><span class="team winner">Los Angeles 6</span></div>
+      <div class="game-box"><span class="dot">🟢</span><span class="team winner">Edmonton 7</span><span class="team">Los Angeles 4</span></div>
       <div class="game-box"><span class="team faded">Game 4</span><span class="team faded">Coming</span></div>
       <div class="game-box"><span class="team faded">Game 5</span><span class="team faded">Coming</span></div>
       <div class="game-box"><span class="team faded">Game 6</span><span class="team faded">Coming</span></div>
@@ -85,68 +85,61 @@
 
     <div class="series-info"><div><strong>Jets vs Blues</strong> — Pick: Jets in 6</div><div class="series-tag">Anxiously Waiting</div></div>
     <div class="game-grid">
-      <div class="game-box"><span class="team">St. Louis 3</span><span class="team winner">Winnipeg 5</span></div>
-      <div class="game-box"><span class="team">St. Louis 1</span><span class="team winner">Winnipeg 2</span></div>
-      <div class="game-box"><span class="team winner">St. Louis 7</span><span class="team">Winnipeg 2</span></div>
-      <div class="game-box"><span class="team winner">St. Louis 5</span><span class="team">Winnipeg 1</span></div>
+      <div class="game-box"><span class="dot">🟢</span><span class="team">St. Louis 3</span><span class="team winner">Winnipeg 5</span></div>
+      <div class="game-box"><span class="dot">🟢</span><span class="team">St. Louis 1</span><span class="team winner">Winnipeg 2</span></div>
+      <div class="game-box"><span class="dot">🔴</span><span class="team winner">St. Louis 7</span><span class="team">Winnipeg 2</span></div>
+      <div class="game-box"><span class="dot">🔴</span><span class="team winner">St. Louis 5</span><span class="team">Winnipeg 1</span></div>
       <div class="game-box"><span class="team faded">Game 5</span><span class="team faded">Coming</span></div>
       <div class="game-box"><span class="team faded">Game 6</span><span class="team faded">Coming</span></div>
       <div class="game-box"><span class="team faded">Game 7</span><span class="team faded">Coming</span></div>
     </div>
   </div>
-	  <div class="card">
-    <h2>Tyler</h2>
+    <div class="card">
+    <h2>Clay</h2>
 
     <div class="series-info"><div><strong>Leafs vs Sens</strong> — Pick: Sens in 6</div><div class="series-tag">Anxiously Waiting</div></div>
     <div class="game-grid">
-      <div class="game-box"><span class="team winner">Toronto 6</span><span class="team">Ottawa 2</span></div>
-      <div class="game-box"><span class="team winner">Toronto 3</span><span class="team">Ottawa 2</span></div>
-      <div class="game-box"><span class="team winner">Toronto 3</span><span class="team">Ottawa 2</span></div>
-      <div class="game-box"><span class="team">Toronto 3</span><span class="team winner">Ottawa 4</span></div>
+      <div class="game-box"><span class="dot">🔴</span><span class="team winner">Toronto 6</span><span class="team">Ottawa 2</span></div>
+      <div class="game-box"><span class="dot">🔴</span><span class="team winner">Toronto 3</span><span class="team">Ottawa 2</span></div>
+      <div class="game-box"><span class="dot">🔴</span><span class="team winner">Toronto 3</span><span class="team">Ottawa 2</span></div>
+      <div class="game-box"><span class="dot">🟢</span><span class="team">Toronto 3</span><span class="team winner">Ottawa 4</span></div>
       <div class="game-box"><span class="team faded">Game 5</span><span class="team faded">Coming</span></div>
       <div class="game-box"><span class="team faded">Game 6</span><span class="team faded">Coming</span></div>
       <div class="game-box"><span class="team faded">Game 7</span><span class="team faded">Coming</span></div>
     </div>
 
-    <div class="series-info"><div><strong>Habs vs Caps</strong> — Pick: Caps in 6</div><div class="series-tag">Anxiously Waiting</div></div>
+    <div class="series-info"><div><strong>Habs vs Caps</strong> — Pick: Habs in 7</div><div class="series-tag">Anxiously Waiting</div></div>
     <div class="game-grid">
-      <div class="game-box"><span class="team winner">Washington 3</span><span class="team">Montreal 2</span></div>
-      <div class="game-box"><span class="team winner">Washington 3</span><span class="team">Montreal 1</span></div>
-      <div class="game-box"><span class="team winner">Montreal 6</span><span class="team">Washington 3</span></div>
-      <div class="game-box"><span class="team winner">Washington 5</span><span class="team">Montreal 2</span></div>
+      <div class="game-box"><span class="dot">🔴</span><span class="team winner">Washington 3</span><span class="team">Montreal 2</span></div>
+      <div class="game-box"><span class="dot">🔴</span><span class="team winner">Washington 3</span><span class="team">Montreal 1</span></div>
+      <div class="game-box"><span class="dot">🟢</span><span class="team winner">Montreal 6</span><span class="team">Washington 3</span></div>
+      <div class="game-box"><span class="dot">🔴</span><span class="team winner">Washington 5</span><span class="team">Montreal 2</span></div>
       <div class="game-box"><span class="team faded">Game 5</span><span class="team faded">Coming</span></div>
       <div class="game-box"><span class="team faded">Game 6</span><span class="team faded">Coming</span></div>
       <div class="game-box"><span class="team faded">Game 7</span><span class="team faded">Coming</span></div>
     </div>
 
-    <div class="series-info"><div><strong>Oilers vs Kings</strong> — Pick: Edmonton in 6</div><div class="series-tag">Anxiously Waiting</div></div>
+    <div class="series-info"><div><strong>Oilers vs Kings</strong> — Pick: Edmonton in 5</div><div class="series-tag">Anxiously Waiting</div></div>
     <div class="game-grid">
-      <div class="game-box"><span class="team">Edmonton 5</span><span class="team winner">Los Angeles 6</span></div>
-      <div class="game-box"><span class="team">Edmonton 2</span><span class="team winner">Los Angeles 6</span></div>
-      <div class="game-box"><span class="team winner">Edmonton 7</span><span class="team">Los Angeles 4</span></div>
+      <div class="game-box"><span class="dot">🔴</span><span class="team">Edmonton 5</span><span class="team winner">Los Angeles 6</span></div>
+      <div class="game-box"><span class="dot">🔴</span><span class="team">Edmonton 2</span><span class="team winner">Los Angeles 6</span></div>
+      <div class="game-box"><span class="dot">🟢</span><span class="team winner">Edmonton 7</span><span class="team">Los Angeles 4</span></div>
       <div class="game-box"><span class="team faded">Game 4</span><span class="team faded">Coming</span></div>
       <div class="game-box"><span class="team faded">Game 5</span><span class="team faded">Coming</span></div>
       <div class="game-box"><span class="team faded">Game 6</span><span class="team faded">Coming</span></div>
       <div class="game-box"><span class="team faded">Game 7</span><span class="team faded">Coming</span></div>
     </div>
 
-    <div class="series-info"><div><strong>Jets vs Blues</strong> — Pick: Jets in 5</div><div class="series-tag">Anxiously Waiting</div></div>
+    <div class="series-info"><div><strong>Jets vs Blues</strong> — Pick: Jets in 6</div><div class="series-tag">Anxiously Waiting</div></div>
     <div class="game-grid">
-      <div class="game-box"><span class="team">St. Louis 3</span><span class="team winner">Winnipeg 5</span></div>
-      <div class="game-box"><span class="team">St. Louis 1</span><span class="team winner">Winnipeg 2</span></div>
-      <div class="game-box"><span class="team winner">St. Louis 7</span><span class="team">Winnipeg 2</span></div>
-      <div class="game-box"><span class="team winner">St. Louis 5</span><span class="team">Winnipeg 1</span></div>
+      <div class="game-box"><span class="dot">🟢</span><span class="team">St. Louis 3</span><span class="team winner">Winnipeg 5</span></div>
+      <div class="game-box"><span class="dot">🟢</span><span class="team">St. Louis 1</span><span class="team winner">Winnipeg 2</span></div>
+      <div class="game-box"><span class="dot">🔴</span><span class="team winner">St. Louis 7</span><span class="team">Winnipeg 2</span></div>
+      <div class="game-box"><span class="dot">🔴</span><span class="team winner">St. Louis 5</span><span class="team">Winnipeg 1</span></div>
       <div class="game-box"><span class="team faded">Game 5</span><span class="team faded">Coming</span></div>
       <div class="game-box"><span class="team faded">Game 6</span><span class="team faded">Coming</span></div>
       <div class="game-box"><span class="team faded">Game 7</span><span class="team faded">Coming</span></div>
     </div>
-  </div>
-
-  <div class="card">
-    <h2>Clay</h2>
-
-    <!-- Clay same structure as Tyler, can duplicate if needed -->
-
   </div>
 
 </div>
