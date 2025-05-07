@@ -325,27 +325,28 @@
 <!-- CLAY CARD -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
+<script>
 const donutData = {
-  labels: ['Correct', 'Wrong', 'Pending'],
+  labels: ['Correct', 'Other'],
   datasets: [
     {
       label: 'Jason',
-      data: [2, 1, 1],
-      backgroundColor: ['#20e1a4', '#e0661c', '#888'],
+      data: [2, 2],
+      backgroundColor: ['#20e1a4', '#1eb2a6'],  // green + teal-blue
       borderWidth: 8,
       borderColor: '#1c1c1c'
     },
     {
       label: 'Tyler',
-      data: [1, 2, 1],
-      backgroundColor: ['#20e1a4', '#e0661c', '#888'],
+      data: [1, 3],
+      backgroundColor: ['#20e1a4', '#a34588'],  // green + reddish-purple
       borderWidth: 8,
       borderColor: '#1c1c1c'
     },
     {
       label: 'Clay',
-      data: [3, 0, 1],
-      backgroundColor: ['#20e1a4', '#e0661c', '#888'],
+      data: [3, 1],
+      backgroundColor: ['#20e1a4', '#d18f1b'],  // green + burnt yellow-orange
       borderWidth: 8,
       borderColor: '#1c1c1c'
     }
@@ -368,5 +369,7 @@ window.onload = function() {
   new Chart(document.getElementById('comparisonDonut'), donutConfig);
 };
 </script>
+</script>
+
 </body>
 </html>
