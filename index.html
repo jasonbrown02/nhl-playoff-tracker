@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NHL Playoff Tracker</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NHL Playoff Tracker</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&amp;display=swap" rel="stylesheet"/>
+<style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
@@ -99,151 +100,152 @@
     .loser {
       color: #bbb;
     }
-  </style>
+  
+    .empty {
+      background-color: #444;
+      color: #888;
+      font-style: italic;
+    }
+</style>
 </head>
 <body>
-	
 <!-- SCOREBOARD SECTION -->
 <section class="scoreboard">
-  <h2>🏆 Current Standings</h2>
-  <div class="scoreboard-grid">
-    <div class="score-card leader">
-      <h3>🥇 Jason</h3>
-      <p>4 Points</p>
-    </div>
-    <div class="score-card leader">
-      <h3>🥇 Tyler</h3>
-      <p>4 Points</p>
-    </div>
-    <div class="score-card">
-      <h3>🥉 Clay</h3>
-      <p>2 Points</p>
-    </div>
-  </div>
+<h2>🏆 Current Standings</h2>
+<div class="scoreboard-grid">
+<div class="score-card leader">
+<h3>🥇 Jason</h3>
+<p>4 Points</p>
+</div>
+<div class="score-card leader">
+<h3>🥇 Tyler</h3>
+<p>4 Points</p>
+</div>
+<div class="score-card">
+<h3>🥉 Clay</h3>
+<p>2 Points</p>
+</div>
+</div>
 </section>
-
 <!-- JASON CARD -->
 <div class="card">
-  <h2>Jason</h2>
-  <div class="series-info"><div><strong>Leafs vs Sens</strong> — Pick: Leafs in 7</div><div class="series-tag">Final</div></div>
-  <div class="game-grid">
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Toronto</div><div class="score">6</div><div class="team loser">Ottawa</div><div class="score">2</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Toronto</div><div class="score">3</div><div class="team loser">Ottawa</div><div class="score">2</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Toronto</div><div class="score">3</div><div class="team loser">Ottawa</div><div class="score">2</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team loser">Toronto</div><div class="score">3</div><div class="team winner-wrong">Ottawa</div><div class="score">4</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team loser">Toronto</div><div class="score">0</div><div class="team winner-wrong">Ottawa</div><div class="score">4</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Toronto</div><div class="score">4</div><div class="team loser">Ottawa</div><div class="score">2</div></div>
-  </div>
-  <div class="series-info"><div><strong>Habs vs Caps</strong> — Pick: Habs in 6</div><div class="series-tag">Final</div></div>
-  <div class="game-grid">
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Washington</div><div class="score">3</div><div class="team loser">Montreal</div><div class="score">2</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Washington</div><div class="score">3</div><div class="team loser">Montreal</div><div class="score">1</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Montreal</div><div class="score">6</div><div class="team loser">Washington</div><div class="score">3</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Washington</div><div class="score">5</div><div class="team loser">Montreal</div><div class="score">2</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Washington</div><div class="score">4</div><div class="team loser">Montreal</div><div class="score">1</div></div>
-  </div>
-  <div class="series-info"><div><strong>Oilers vs Kings</strong> — Pick: Edmonton in 5</div><div class="series-tag">Final</div></div>
-  <div class="game-grid">
-    <div class="game-box"><div class="dot">💩</div><div class="team loser">Edmonton</div><div class="score">5</div><div class="team winner-wrong">Los Angeles</div><div class="score">6</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team loser">Edmonton</div><div class="score">2</div><div class="team winner-wrong">Los Angeles</div><div class="score">6</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Edmonton</div><div class="score">7</div><div class="team loser">Los Angeles</div><div class="score">4</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Edmonton</div><div class="score">4</div><div class="team loser">Los Angeles</div><div class="score">3</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Edmonton</div><div class="score">3</div><div class="team loser">Los Angeles</div><div class="score">1</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Edmonton</div><div class="score">6</div><div class="team loser">Los Angeles</div><div class="score">4</div></div>
-  </div>
-  <div class="series-info"><div><strong>Jets vs Blues</strong> — Pick: Jets in 6</div><div class="series-tag">Final</div></div>
-  <div class="game-grid">
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Winnipeg</div><div class="score">5</div><div class="team loser">St. Louis</div><div class="score">3</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Winnipeg</div><div class="score">2</div><div class="team loser">St. Louis</div><div class="score">1</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">St. Louis</div><div class="score">7</div><div class="team loser">Winnipeg</div><div class="score">2</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">St. Louis</div><div class="score">5</div><div class="team loser">Winnipeg</div><div class="score">1</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Winnipeg</div><div class="score">5</div><div class="team loser">St. Louis</div><div class="score">3</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">St. Louis</div><div class="score">5</div><div class="team loser">Winnipeg</div><div class="score">2</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Winnipeg</div><div class="score">4</div><div class="team loser">St. Louis</div><div class="score">3</div></div>
-  </div>
+<h2>Jason</h2>
+<div class="series-info"><div><strong>Leafs vs Sens</strong> — Pick: Leafs in 7</div><div class="series-tag">Wrong</div></div>
+<div class="game-grid">
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Toronto</div><div class="score">6</div><div class="team loser">Ottawa</div><div class="score">2</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Toronto</div><div class="score">3</div><div class="team loser">Ottawa</div><div class="score">2</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Toronto</div><div class="score">3</div><div class="team loser">Ottawa</div><div class="score">2</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team loser">Toronto</div><div class="score">3</div><div class="team winner-wrong">Ottawa</div><div class="score">4</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team loser">Toronto</div><div class="score">0</div><div class="team winner-wrong">Ottawa</div><div class="score">4</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Toronto</div><div class="score">4</div><div class="team loser">Ottawa</div><div class="score">2</div></div>
+<div class="game-box empty">Game not played</div></div>
+<div class="series-info"><div><strong>Habs vs Caps</strong> — Pick: Habs in 6</div><div class="series-tag">Wrong</div></div>
+<div class="game-grid">
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Washington</div><div class="score">3</div><div class="team loser">Montreal</div><div class="score">2</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Washington</div><div class="score">3</div><div class="team loser">Montreal</div><div class="score">1</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Montreal</div><div class="score">6</div><div class="team loser">Washington</div><div class="score">3</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Washington</div><div class="score">5</div><div class="team loser">Montreal</div><div class="score">2</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Washington</div><div class="score">4</div><div class="team loser">Montreal</div><div class="score">1</div></div>
+<div class="game-box empty">Game not played</div><div class="game-box empty">Game not played</div></div>
+<div class="series-info"><div><strong>Oilers vs Kings</strong> — Pick: Edmonton in 5</div><div class="series-tag">Correct</div></div>
+<div class="game-grid">
+<div class="game-box"><div class="dot">💩</div><div class="team loser">Edmonton</div><div class="score">5</div><div class="team winner-wrong">Los Angeles</div><div class="score">6</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team loser">Edmonton</div><div class="score">2</div><div class="team winner-wrong">Los Angeles</div><div class="score">6</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Edmonton</div><div class="score">7</div><div class="team loser">Los Angeles</div><div class="score">4</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Edmonton</div><div class="score">4</div><div class="team loser">Los Angeles</div><div class="score">3</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Edmonton</div><div class="score">3</div><div class="team loser">Los Angeles</div><div class="score">1</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Edmonton</div><div class="score">6</div><div class="team loser">Los Angeles</div><div class="score">4</div></div>
+<div class="game-box empty">Game not played</div></div>
+<div class="series-info"><div><strong>Jets vs Blues</strong> — Pick: Jets in 6</div><div class="series-tag">Wrong</div></div>
+<div class="game-grid">
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Winnipeg</div><div class="score">5</div><div class="team loser">St. Louis</div><div class="score">3</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Winnipeg</div><div class="score">2</div><div class="team loser">St. Louis</div><div class="score">1</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">St. Louis</div><div class="score">7</div><div class="team loser">Winnipeg</div><div class="score">2</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">St. Louis</div><div class="score">5</div><div class="team loser">Winnipeg</div><div class="score">1</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Winnipeg</div><div class="score">5</div><div class="team loser">St. Louis</div><div class="score">3</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">St. Louis</div><div class="score">5</div><div class="team loser">Winnipeg</div><div class="score">2</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Winnipeg</div><div class="score">4</div><div class="team loser">St. Louis</div><div class="score">3</div></div>
 </div>
-
+</div>
 <!-- TYLER CARD -->
 <div class="card">
-  <h2>Tyler</h2>
-  <div class="series-info"><div><strong>Leafs vs Sens</strong> — Pick: Sens in 6</div><div class="series-tag">Final</div></div>
-  <div class="game-grid">
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Toronto</div><div class="score">6</div><div class="team loser">Ottawa</div><div class="score">2</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Toronto</div><div class="score">3</div><div class="team loser">Ottawa</div><div class="score">2</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Toronto</div><div class="score">3</div><div class="team loser">Ottawa</div><div class="score">2</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Ottawa</div><div class="score">4</div><div class="team loser">Toronto</div><div class="score">3</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Ottawa</div><div class="score">4</div><div class="team loser">Toronto</div><div class="score">0</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Toronto</div><div class="score">4</div><div class="team loser">Ottawa</div><div class="score">2</div></div>
-  </div>
-  <div class="series-info"><div><strong>Habs vs Caps</strong> — Pick: Caps in 6</div><div class="series-tag">Final</div></div>
-  <div class="game-grid">
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Washington</div><div class="score">3</div><div class="team loser">Montreal</div><div class="score">2</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Washington</div><div class="score">3</div><div class="team loser">Montreal</div><div class="score">1</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Montreal</div><div class="score">6</div><div class="team loser">Washington</div><div class="score">3</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Washington</div><div class="score">5</div><div class="team loser">Montreal</div><div class="score">2</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Washington</div><div class="score">4</div><div class="team loser">Montreal</div><div class="score">1</div></div>
-  </div>
-  <div class="series-info"><div><strong>Oilers vs Kings</strong> — Pick: Edmonton in 6</div><div class="series-tag">Final</div></div>
-  <div class="game-grid">
-    <div class="game-box"><div class="dot">💩</div><div class="team loser">Edmonton</div><div class="score">5</div><div class="team winner-wrong">Los Angeles</div><div class="score">6</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team loser">Edmonton</div><div class="score">2</div><div class="team winner-wrong">Los Angeles</div><div class="score">6</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Edmonton</div><div class="score">7</div><div class="team loser">Los Angeles</div><div class="score">4</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Edmonton</div><div class="score">4</div><div class="team loser">Los Angeles</div><div class="score">3</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Edmonton</div><div class="score">3</div><div class="team loser">Los Angeles</div><div class="score">1</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Edmonton</div><div class="score">6</div><div class="team loser">Los Angeles</div><div class="score">4</div></div>
-  </div>
-  <div class="series-info"><div><strong>Jets vs Blues</strong> — Pick: Jets in 5</div><div class="series-tag">Final</div></div>
-  <div class="game-grid">
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Winnipeg</div><div class="score">5</div><div class="team loser">St. Louis</div><div class="score">3</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Winnipeg</div><div class="score">2</div><div class="team loser">St. Louis</div><div class="score">1</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">St. Louis</div><div class="score">7</div><div class="team loser">Winnipeg</div><div class="score">2</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">St. Louis</div><div class="score">5</div><div class="team loser">Winnipeg</div><div class="score">1</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Winnipeg</div><div class="score">5</div><div class="team loser">St. Louis</div><div class="score">3</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">St. Louis</div><div class="score">5</div><div class="team loser">Winnipeg</div><div class="score">2</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Winnipeg</div><div class="score">4</div><div class="team loser">St. Louis</div><div class="score">3</div></div>
-  </div>
+<h2>Tyler</h2>
+<div class="series-info"><div><strong>Leafs vs Sens</strong> — Pick: Sens in 6</div><div class="series-tag">Wrong</div></div>
+<div class="game-grid">
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Toronto</div><div class="score">6</div><div class="team loser">Ottawa</div><div class="score">2</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Toronto</div><div class="score">3</div><div class="team loser">Ottawa</div><div class="score">2</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Toronto</div><div class="score">3</div><div class="team loser">Ottawa</div><div class="score">2</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Ottawa</div><div class="score">4</div><div class="team loser">Toronto</div><div class="score">3</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Ottawa</div><div class="score">4</div><div class="team loser">Toronto</div><div class="score">0</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Toronto</div><div class="score">4</div><div class="team loser">Ottawa</div><div class="score">2</div></div>
+<div class="game-box empty">Game not played</div></div>
+<div class="series-info"><div><strong>Habs vs Caps</strong> — Pick: Caps in 6</div><div class="series-tag">Wrong</div></div>
+<div class="game-grid">
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Washington</div><div class="score">3</div><div class="team loser">Montreal</div><div class="score">2</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Washington</div><div class="score">3</div><div class="team loser">Montreal</div><div class="score">1</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Montreal</div><div class="score">6</div><div class="team loser">Washington</div><div class="score">3</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Washington</div><div class="score">5</div><div class="team loser">Montreal</div><div class="score">2</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Washington</div><div class="score">4</div><div class="team loser">Montreal</div><div class="score">1</div></div>
+<div class="game-box empty">Game not played</div><div class="game-box empty">Game not played</div></div>
+<div class="series-info"><div><strong>Oilers vs Kings</strong> — Pick: Edmonton in 6</div><div class="series-tag">Correct</div></div>
+<div class="game-grid">
+<div class="game-box"><div class="dot">💩</div><div class="team loser">Edmonton</div><div class="score">5</div><div class="team winner-wrong">Los Angeles</div><div class="score">6</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team loser">Edmonton</div><div class="score">2</div><div class="team winner-wrong">Los Angeles</div><div class="score">6</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Edmonton</div><div class="score">7</div><div class="team loser">Los Angeles</div><div class="score">4</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Edmonton</div><div class="score">4</div><div class="team loser">Los Angeles</div><div class="score">3</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Edmonton</div><div class="score">3</div><div class="team loser">Los Angeles</div><div class="score">1</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Edmonton</div><div class="score">6</div><div class="team loser">Los Angeles</div><div class="score">4</div></div>
+<div class="game-box empty">Game not played</div></div>
+<div class="series-info"><div><strong>Jets vs Blues</strong> — Pick: Jets in 5</div><div class="series-tag">Wrong</div></div>
+<div class="game-grid">
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Winnipeg</div><div class="score">5</div><div class="team loser">St. Louis</div><div class="score">3</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Winnipeg</div><div class="score">2</div><div class="team loser">St. Louis</div><div class="score">1</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">St. Louis</div><div class="score">7</div><div class="team loser">Winnipeg</div><div class="score">2</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">St. Louis</div><div class="score">5</div><div class="team loser">Winnipeg</div><div class="score">1</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Winnipeg</div><div class="score">5</div><div class="team loser">St. Louis</div><div class="score">3</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">St. Louis</div><div class="score">5</div><div class="team loser">Winnipeg</div><div class="score">2</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Winnipeg</div><div class="score">4</div><div class="team loser">St. Louis</div><div class="score">3</div></div>
 </div>
-
+</div>
 <!-- CLAY CARD -->
 <div class="card">
-  <h2>Clay</h2>
-  <div class="series-info"><div><strong>Leafs vs Sens</strong> — Pick: Sens in 6</div><div class="series-tag">Final</div></div>
-  <div class="game-grid">
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Toronto</div><div class="score">6</div><div class="team loser">Ottawa</div><div class="score">2</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Toronto</div><div class="score">3</div><div class="team loser">Ottawa</div><div class="score">2</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Toronto</div><div class="score">3</div><div class="team loser">Ottawa</div><div class="score">2</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Ottawa</div><div class="score">4</div><div class="team loser">Toronto</div><div class="score">3</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Ottawa</div><div class="score">4</div><div class="team loser">Toronto</div><div class="score">0</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Toronto</div><div class="score">4</div><div class="team loser">Ottawa</div><div class="score">2</div></div>
-  </div>
-  <div class="series-info"><div><strong>Habs vs Caps</strong> — Pick: Habs in 7</div><div class="series-tag">Final</div></div>
-  <div class="game-grid">
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Washington</div><div class="score">3</div><div class="team loser">Montreal</div><div class="score">2</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Washington</div><div class="score">3</div><div class="team loser">Montreal</div><div class="score">1</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Montreal</div><div class="score">6</div><div class="team loser">Washington</div><div class="score">3</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Washington</div><div class="score">5</div><div class="team loser">Montreal</div><div class="score">2</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Washington</div><div class="score">4</div><div class="team loser">Montreal</div><div class="score">1</div></div>
-  </div>
-  <div class="series-info"><div><strong>Oilers vs Kings</strong> — Pick: Edmonton in 5</div><div class="series-tag">Final</div></div>
-  <div class="game-grid">
-    <div class="game-box"><div class="dot">💩</div><div class="team loser">Edmonton</div><div class="score">5</div><div class="team winner-wrong">Los Angeles</div><div class="score">6</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team loser">Edmonton</div><div class="score">2</div><div class="team winner-wrong">Los Angeles</div><div class="score">6</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Edmonton</div><div class="score">7</div><div class="team loser">Los Angeles</div><div class="score">4</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Edmonton</div><div class="score">4</div><div class="team loser">Los Angeles</div><div class="score">3</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Edmonton</div><div class="score">3</div><div class="team loser">Los Angeles</div><div class="score">1</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Edmonton</div><div class="score">6</div><div class="team loser">Los Angeles</div><div class="score">4</div></div>
-  </div>
-  <div class="series-info"><div><strong>Jets vs Blues</strong> — Pick: Jets in 6</div><div class="series-tag">Final</div></div>
-  <div class="game-grid">
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Winnipeg</div><div class="score">5</div><div class="team loser">St. Louis</div><div class="score">3</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Winnipeg</div><div class="score">2</div><div class="team loser">St. Louis</div><div class="score">1</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">St. Louis</div><div class="score">7</div><div class="team loser">Winnipeg</div><div class="score">2</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">St. Louis</div><div class="score">5</div><div class="team loser">Winnipeg</div><div class="score">1</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Winnipeg</div><div class="score">5</div><div class="team loser">St. Louis</div><div class="score">3</div></div>
-    <div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">St. Louis</div><div class="score">5</div><div class="team loser">Winnipeg</div><div class="score">2</div></div>
-    <div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Winnipeg</div><div class="score">4</div><div class="team loser">St. Louis</div><div class="score">3</div></div>
-  </div>
+<h2>Clay</h2>
+<div class="series-info"><div><strong>Leafs vs Sens</strong> — Pick: Sens in 6</div><div class="series-tag">Wrong</div></div>
+<div class="game-grid">
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Toronto</div><div class="score">6</div><div class="team loser">Ottawa</div><div class="score">2</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Toronto</div><div class="score">3</div><div class="team loser">Ottawa</div><div class="score">2</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Toronto</div><div class="score">3</div><div class="team loser">Ottawa</div><div class="score">2</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Ottawa</div><div class="score">4</div><div class="team loser">Toronto</div><div class="score">3</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Ottawa</div><div class="score">4</div><div class="team loser">Toronto</div><div class="score">0</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Toronto</div><div class="score">4</div><div class="team loser">Ottawa</div><div class="score">2</div></div>
+<div class="game-box empty">Game not played</div></div>
+<div class="series-info"><div><strong>Habs vs Caps</strong> — Pick: Habs in 7</div><div class="series-tag">Wrong</div></div>
+<div class="game-grid">
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Washington</div><div class="score">3</div><div class="team loser">Montreal</div><div class="score">2</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Washington</div><div class="score">3</div><div class="team loser">Montreal</div><div class="score">1</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Montreal</div><div class="score">6</div><div class="team loser">Washington</div><div class="score">3</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Washington</div><div class="score">5</div><div class="team loser">Montreal</div><div class="score">2</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">Washington</div><div class="score">4</div><div class="team loser">Montreal</div><div class="score">1</div></div>
+<div class="game-box empty">Game not played</div><div class="game-box empty">Game not played</div></div>
+<div class="series-info"><div><strong>Oilers vs Kings</strong> — Pick: Edmonton in 5</div><div class="series-tag">Correct</div></div>
+<div class="game-grid">
+<div class="game-box"><div class="dot">💩</div><div class="team loser">Edmonton</div><div class="score">5</div><div class="team winner-wrong">Los Angeles</div><div class="score">6</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team loser">Edmonton</div><div class="score">2</div><div class="team winner-wrong">Los Angeles</div><div class="score">6</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Edmonton</div><div class="score">7</div><div class="team loser">Los Angeles</div><div class="score">4</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Edmonton</div><div class="score">4</div><div class="team loser">Los Angeles</div><div class="score">3</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Edmonton</div><div class="score">3</div><div class="team loser">Los Angeles</div><div class="score">1</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Edmonton</div><div class="score">6</div><div class="team loser">Los Angeles</div><div class="score">4</div></div>
+<div class="game-box empty">Game not played</div></div>
+<div class="series-info"><div><strong>Jets vs Blues</strong> — Pick: Jets in 6</div><div class="series-tag">Wrong</div></div>
+<div class="game-grid">
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Winnipeg</div><div class="score">5</div><div class="team loser">St. Louis</div><div class="score">3</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Winnipeg</div><div class="score">2</div><div class="team loser">St. Louis</div><div class="score">1</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">St. Louis</div><div class="score">7</div><div class="team loser">Winnipeg</div><div class="score">2</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">St. Louis</div><div class="score">5</div><div class="team loser">Winnipeg</div><div class="score">1</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Winnipeg</div><div class="score">5</div><div class="team loser">St. Louis</div><div class="score">3</div></div>
+<div class="game-box"><div class="dot">💩</div><div class="team winner-wrong">St. Louis</div><div class="score">5</div><div class="team loser">Winnipeg</div><div class="score">2</div></div>
+<div class="game-box"><div class="dot">🏆</div><div class="team winner-correct">Winnipeg</div><div class="score">4</div><div class="team loser">St. Louis</div><div class="score">3</div></div>
 </div>
-
-	</body>
+</div>
+</body>
 </html>
