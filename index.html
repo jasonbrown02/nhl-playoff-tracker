@@ -6,140 +6,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>NHL Playoff Tracker</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&amp;display=swap" rel="stylesheet"/>
-<style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
-      color: #e0e0e0;
-      padding: 2rem;
-    }
-    h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-    .scoreboard {
-      margin-bottom: 3rem;
-    }
-    .scoreboard-grid {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .score-card {
-      background-color: #2a2a2a;
-      padding: 1rem 2rem;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    }
-    .leader {
-      border: 2px solid gold;
-    }
-    .card {
-      background-color: #1f1f1f;
-      border-radius: 12px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    }
-    .card h2 {
-      margin-top: 0;
-      border-bottom: 1px solid #444;
-      padding-bottom: 0.5rem;
-    }
-    .series-info {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-    .series-tag {
-      background-color: #444;
-      color: #fff;
-      padding: 4px 10px;
-      border-radius: 12px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-    .game-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 0.5rem;
-      margin-bottom: 2rem;
-    }
-    .game-box {
-      background-color: #2e2e2e;
-      padding: 0.5rem;
-      border-radius: 8px;
-      text-align: center;
-    }
-    .dot {
-      font-size: 1.2rem;
-    }
-    .team {
-      display: block;
-      font-size: 1rem;
-    }
-    .score {
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-    .winner-correct {
-      color: #20e1a4;
-      font-weight: bold;
-    }
-    .winner-wrong {
-      color: #e0661c;
-      font-weight: bold;
-    }
-    .loser {
-      color: #bbb;
-    }
-  
-    .empty {
-      background-color: #3a3a3a;
-      color: #888;
-      font-style: italic;
-      text-align: center;
-      padding: 0.5rem;
-      border-radius: 8px;
-    }
-
-    .series-tag {
-      background-color: #444;
-      color: #fff;
-      padding: 4px 10px;
-      border-radius: 12px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-    .series-tag.winner {
-      background-color: #28a745;
-      color: #fff;
-    }
-
-    .series-tag.loser {
-      background-color: #d32f2f;
-      color: #fff;
-    }
-
-    .series-info .matchup {
-      font-size: 0.9rem;
-      color: #aaa;
-    }
-    .series-info .pick {
-      font-size: 1.1rem;
-      font-weight: bold;
-      color: #fff;
-      margin-top: 2px;
-    }
-</style>
+<style></style>
 </head>
 <body>
 <!-- SCOREBOARD SECTION -->
@@ -159,7 +26,23 @@
 <p>2 Points</p>
 </div>
 </div>
-</section><div class="card"><h2>Clay</h2><div class="series-info"><div><div class="matchup">Jets vs Stars</div><div class="pick">Pick: Jets in 6</div></div><div class="series-tag">Still Going</div></div><div class="game-grid"><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div></div><div class="series-info"><div><div class="matchup">Knights vs Oilers</div><div class="pick">Pick: Vegas in 7</div></div><div class="series-tag">Still Going</div></div><div class="game-grid"><div class="game-box"><div class="dot">🏒</div><div class="team">Vegas</div><div class="score">2</div><div class="team">Oilers</div><div class="score">0</div></div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div></div><div class="series-info"><div><div class="matchup">Canes vs Caps</div><div class="pick">Pick: Canes in 6</div></div><div class="series-tag">Still Going</div></div><div class="game-grid"><div class="game-box"><div class="dot">🏒</div><div class="team">Carolina</div><div class="score">4</div><div class="team">Washington</div><div class="score">2</div></div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div></div><div class="series-info"><div><div class="matchup">Leafs vs Panthers</div><div class="pick">Pick: Fla in 7</div></div><div class="series-tag">Still Going</div></div><div class="game-grid"><div class="game-box"><div class="dot">🏒</div><div class="team">Toronto</div><div class="score">5</div><div class="team">Florida</div><div class="score">3</div></div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div></div></div><div class="card"><h2>Tyler</h2><div class="series-info"><div><div class="matchup">Jets vs Stars</div><div class="pick">Pick: Jets in 6</div></div><div class="series-tag">Still Going</div></div><div class="game-grid"><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div></div><div class="series-info"><div><div class="matchup">Knights vs Oilers</div><div class="pick">Pick: Oilers in 6</div></div><div class="series-tag">Still Going</div></div><div class="game-grid"><div class="game-box"><div class="dot">🏒</div><div class="team">Vegas</div><div class="score">2</div><div class="team">Oilers</div><div class="score">0</div></div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div></div><div class="series-info"><div><div class="matchup">Canes vs Caps</div><div class="pick">Pick: Canes in 7</div></div><div class="series-tag">Still Going</div></div><div class="game-grid"><div class="game-box"><div class="dot">🏒</div><div class="team">Carolina</div><div class="score">4</div><div class="team">Washington</div><div class="score">2</div></div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div></div><div class="series-info"><div><div class="matchup">Leafs vs Panthers</div><div class="pick">Pick: Panthers in 6</div></div><div class="series-tag">Still Going</div></div><div class="game-grid"><div class="game-box"><div class="dot">🏒</div><div class="team">Toronto</div><div class="score">5</div><div class="team">Florida</div><div class="score">3</div></div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div></div></div><div class="card"><h2>Jason</h2><div class="series-info"><div><div class="matchup">Jets vs Stars</div><div class="pick">Pick: Dallas in 6</div></div><div class="series-tag">Still Going</div></div><div class="game-grid"><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div></div><div class="series-info"><div><div class="matchup">Knights vs Oilers</div><div class="pick">Pick: Vegas in 7</div></div><div class="series-tag">Still Going</div></div><div class="game-grid"><div class="game-box"><div class="dot">🏒</div><div class="team">Vegas</div><div class="score">2</div><div class="team">Oilers</div><div class="score">0</div></div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div></div><div class="series-info"><div><div class="matchup">Canes vs Caps</div><div class="pick">Pick: Canes in 6</div></div><div class="series-tag">Still Going</div></div><div class="game-grid"><div class="game-box"><div class="dot">🏒</div><div class="team">Carolina</div><div class="score">4</div><div class="team">Washington</div><div class="score">2</div></div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div></div><div class="series-info"><div><div class="matchup">Leafs vs Panthers</div><div class="pick">Pick: Leafs in 6</div></div><div class="series-tag">Still Going</div></div><div class="game-grid"><div class="game-box"><div class="dot">🏒</div><div class="team">Toronto</div><div class="score">5</div><div class="team">Florida</div><div class="score">3</div></div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div></div></div><details><summary>Round 1 Results (Click to Expand)</summary><div class="card">
+</section>
+<!-- INFRA: Round 2 Infographic Dashboard -->
+<section class="donut-dashboard" style="display: flex; justify-content: center; gap: 2rem; margin: 2rem auto; flex-wrap: wrap;">
+<div class="donut-tile">
+<div id="jason-donut"></div>
+<p style="text-align: center; margin-top: 0.5rem;">Jason</p>
+</div>
+<div class="donut-tile">
+<div id="tyler-donut"></div>
+<p style="text-align: center; margin-top: 0.5rem;">Tyler</p>
+</div>
+<div class="donut-tile">
+<div id="clay-donut"></div>
+<p style="text-align: center; margin-top: 0.5rem;">Clay</p>
+</div>
+</section>
+<div class="card"><h2>Clay</h2><div class="series-info"><div><div class="matchup">Jets vs Stars</div><div class="pick">Pick: Jets in 6</div></div><div class="series-tag">Still Going</div></div><div class="game-grid"><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div></div><div class="series-info"><div><div class="matchup">Knights vs Oilers</div><div class="pick">Pick: Vegas in 7</div></div><div class="series-tag">Still Going</div></div><div class="game-grid"><div class="game-box"><div class="dot">🏒</div><div class="team">Vegas</div><div class="score">2</div><div class="team">Oilers</div><div class="score">0</div></div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div></div><div class="series-info"><div><div class="matchup">Canes vs Caps</div><div class="pick">Pick: Canes in 6</div></div><div class="series-tag">Still Going</div></div><div class="game-grid"><div class="game-box"><div class="dot">🏒</div><div class="team">Carolina</div><div class="score">4</div><div class="team">Washington</div><div class="score">2</div></div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div></div><div class="series-info"><div><div class="matchup">Leafs vs Panthers</div><div class="pick">Pick: Fla in 7</div></div><div class="series-tag">Still Going</div></div><div class="game-grid"><div class="game-box"><div class="dot">🏒</div><div class="team">Toronto</div><div class="score">5</div><div class="team">Florida</div><div class="score">3</div></div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div></div></div><div class="card"><h2>Tyler</h2><div class="series-info"><div><div class="matchup">Jets vs Stars</div><div class="pick">Pick: Jets in 6</div></div><div class="series-tag">Still Going</div></div><div class="game-grid"><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div></div><div class="series-info"><div><div class="matchup">Knights vs Oilers</div><div class="pick">Pick: Oilers in 6</div></div><div class="series-tag">Still Going</div></div><div class="game-grid"><div class="game-box"><div class="dot">🏒</div><div class="team">Vegas</div><div class="score">2</div><div class="team">Oilers</div><div class="score">0</div></div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div></div><div class="series-info"><div><div class="matchup">Canes vs Caps</div><div class="pick">Pick: Canes in 7</div></div><div class="series-tag">Still Going</div></div><div class="game-grid"><div class="game-box"><div class="dot">🏒</div><div class="team">Carolina</div><div class="score">4</div><div class="team">Washington</div><div class="score">2</div></div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div></div><div class="series-info"><div><div class="matchup">Leafs vs Panthers</div><div class="pick">Pick: Panthers in 6</div></div><div class="series-tag">Still Going</div></div><div class="game-grid"><div class="game-box"><div class="dot">🏒</div><div class="team">Toronto</div><div class="score">5</div><div class="team">Florida</div><div class="score">3</div></div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div></div></div><div class="card"><h2>Jason</h2><div class="series-info"><div><div class="matchup">Jets vs Stars</div><div class="pick">Pick: Dallas in 6</div></div><div class="series-tag">Still Going</div></div><div class="game-grid"><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div></div><div class="series-info"><div><div class="matchup">Knights vs Oilers</div><div class="pick">Pick: Vegas in 7</div></div><div class="series-tag">Still Going</div></div><div class="game-grid"><div class="game-box"><div class="dot">🏒</div><div class="team">Vegas</div><div class="score">2</div><div class="team">Oilers</div><div class="score">0</div></div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div></div><div class="series-info"><div><div class="matchup">Canes vs Caps</div><div class="pick">Pick: Canes in 6</div></div><div class="series-tag">Still Going</div></div><div class="game-grid"><div class="game-box"><div class="dot">🏒</div><div class="team">Carolina</div><div class="score">4</div><div class="team">Washington</div><div class="score">2</div></div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div></div><div class="series-info"><div><div class="matchup">Leafs vs Panthers</div><div class="pick">Pick: Leafs in 6</div></div><div class="series-tag">Still Going</div></div><div class="game-grid"><div class="game-box"><div class="dot">🏒</div><div class="team">Toronto</div><div class="score">5</div><div class="team">Florida</div><div class="score">3</div></div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div><div class="game-box empty">Not Played</div></div></div><details><summary>Round 1 Results (Click to Expand)</summary><div class="card">
 <h2>Jason</h2>
 <div class="series-info"><div><div class="matchup">Leafs vs Sens</div><div class="pick">Pick: Leafs in 7</div></div><div class="series-tag loser">Not even close</div></div>
 <div class="game-grid">
@@ -277,5 +160,44 @@
 <!-- JASON CARD -->
 <!-- TYLER CARD -->
 <!-- CLAY CARD -->
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<!-- INFRA: ApexCharts Donut Config -->
+<script>
+const donutOptions = (el, correct, wrong, pending, name) => ({
+  chart: {
+    type: 'donut',
+    height: 200
+  },
+  series: [correct, wrong, pending],
+  labels: ['Correct', 'Wrong', 'Pending'],
+  colors: ['#20e1a4', '#e0661c', '#888888'],
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '70%'
+      }
+    }
+  },
+  dataLabels: {
+    enabled: false
+  },
+  legend: {
+    show: false
+  },
+  title: {
+    text: name,
+    align: 'center',
+    style: {
+      fontSize: '14px',
+      color: '#fff'
+    }
+  }
+});
+
+// Correct/Wrong/Still going counts for now (you can update these later)
+new ApexCharts(document.querySelector("#jason-donut"), donutOptions("#jason-donut", 2, 1, 1, "Jason")).render();
+new ApexCharts(document.querySelector("#tyler-donut"), donutOptions("#tyler-donut", 1, 2, 1, "Tyler")).render();
+new ApexCharts(document.querySelector("#clay-donut"), donutOptions("#clay-donut", 3, 0, 1, "Clay")).render();
+</script>
 </body>
 </html>
